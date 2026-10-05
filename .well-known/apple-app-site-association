@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["{{APPLE_TEAM_ID}}.com.alb.puzzlecity"],
+        "appIDs": ["S5Z7A3LA78.com.alb.puzzlecity"],
         "components": [{ "/": "/join/*" }]
       }
     ]
