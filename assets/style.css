@@ -177,7 +177,7 @@ a { color: var(--accent-ink); }
 
 .legal .updated { color: var(--ink-muted); margin: 0 0 16px; }
 
-.legal ul { padding-left: 22px; }
+.legal ul, .legal ol { padding-left: 22px; }
 
 footer {
   margin-top: 32px;
