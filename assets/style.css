@@ -1,0 +1,189 @@
+/* Puzzle City site: the app's "Alacakaranlık" palette. Night by default,
+   day when the device prefers light. */
+:root {
+  --background: #12152b;
+  --surface: #1c2042;
+  --ink: #f2efff;
+  --ink-muted: #a7a4cc;
+  --outline: rgba(255, 255, 255, 0.08);
+  --accent: #c3ccEB;
+  --on-accent: #1b1530;
+  --accent-ink: #c3ccEB;
+  --sky-top: #141836;
+  --sky-bottom: #4a3466;
+  --window-on: #c3ccEB;
+  --radius: 18px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #eceef9;
+    --surface: #ffffff;
+    --ink: #1a1d3d;
+    --ink-muted: #5b6090;
+    --outline: rgba(26, 29, 61, 0.08);
+    --accent: #f2bc52;
+    --on-accent: #1a1d3d;
+    --accent-ink: #94650a;
+    --sky-top: #bfd0f0;
+    --sky-bottom: #f5dde3;
+    --window-on: #f7c766;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--ink);
+  font-family: "Overpass", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+/* Only the chosen language shows; both are in the page for readers
+   without JavaScript. */
+html[data-lang="tr"] [lang="en"]:not(html),
+html[data-lang="en"] [lang="tr"]:not(html) { display: none; }
+
+a { color: var(--accent-ink); }
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 19px;
+}
+
+.brand img { width: 36px; height: 36px; border-radius: 9px; }
+
+.lang-switch { display: flex; gap: 6px; }
+
+.lang-switch button {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--outline);
+  background: var(--surface);
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+
+.lang-switch button[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.hero {
+  padding: 32px 24px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--sky-top), var(--sky-bottom));
+  text-align: center;
+}
+
+.hero img { width: 96px; height: 96px; border-radius: 22px; }
+
+.hero h1 { margin: 16px 0 4px; font-size: 32px; line-height: 1.2; }
+
+.hero p { margin: 0; color: var(--ink-muted); }
+
+.card {
+  margin-top: 16px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.card h2 { margin: 0 0 8px; font-size: 20px; }
+
+.buildings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.buildings li {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--outline);
+}
+
+.buildings strong { display: block; }
+
+.buildings span { color: var(--ink-muted); font-size: 15px; }
+
+.stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink-muted);
+}
+
+.button[aria-disabled="true"] { opacity: 0.55; pointer-events: none; }
+
+.code {
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 10px;
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+.legal h1 { font-size: 28px; margin: 0 0 4px; }
+
+.legal h2 { font-size: 19px; margin: 28px 0 6px; }
+
+.legal .updated { color: var(--ink-muted); margin: 0 0 16px; }
+
+.legal ul { padding-left: 22px; }
+
+footer {
+  margin-top: 32px;
+  color: var(--ink-muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+footer a { margin: 0 8px; }

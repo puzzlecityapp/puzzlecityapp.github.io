@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["{{APPLE_TEAM_ID}}.com.alb.puzzlecity"],
+        "components": [{ "/": "/join/*" }]
+      }
+    ]
+  }
+}

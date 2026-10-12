@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.alb.puzzlecity",
+      "sha256_cert_fingerprints": [
+        "54:9F:A8:E1:8A:10:D6:EE:35:F9:B8:7D:7A:85:CF:BB:94:60:7C:30:D2:40:E8:9E:43:B4:5E:20:DF:FB:88:83"
+      ]
+    }
+  }
+]
